@@ -20,3 +20,28 @@ login Staff IT,
 menggunakan admin, manajer
 password,
 menggunakan rahasia
+
+###############################
+create file .htaccess dan simpan di folder paling luar
+-------------------------------
+copy paste skrip berikut dan simpan dengan nama .htaccess
+
+#Server Zend Mulai ---------------------
+#DirectoryIndex index.php
+#RewriteEngine on
+#RewriteBase /
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteCond $1 !^(index\.php|robots\.txt)
+#RewriteRule ^(.*)$ index.php?/$1 [L]
+#Server Zend Selesai ---------------------
+
+#Server Biasa Mulai ---------------------
+RewriteEngine on
+RewriteCond $1 !^(index\.php|robots\.txt)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?/$1 [L]
+#Server Biasa Selesai ---------------------
+
+###################################
