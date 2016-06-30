@@ -21,9 +21,9 @@ menggunakan admin, manajer
 password,
 menggunakan rahasia
 
-###############################
+
 create file .htaccess dan simpan di folder paling luar
--------------------------------
+
 copy paste skrip berikut dan simpan dengan nama .htaccess
 
 #Server Zend Mulai ---------------------
@@ -44,4 +44,3 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ index.php?/$1 [L]
 #Server Biasa Selesai ---------------------
 
-###################################
